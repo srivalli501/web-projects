@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Management</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+   <div class="container">
+   <div class="header">
+   <div class="top-bar">
+    <!--<span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>
+    <span>Standart Event Name Here "17 October at 20:00 - 22:00 on Manhattan / New York"</span>-->
+    <div class="auth-links">
+      <span><a href="register.html"><i class="fa fa-file-text"></i> Register Now</a></span>
+      <span><a href="login.html"><i class="fa fa-user"></i> Login</a></span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="logo">
+        <i class="fa fa-map-marker"></i>
+      <span class="logo-text">E-Management</span>
+    </div>
+     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li>HOME</li>
+      <li>EVENTS</li>
+      <li>PAGES</li>
+      <li>GALLERY</li>
+      <li>BLOG</li>
+      <li>CONTACT US</li>
+    </ul>
+  </div>
+</div>
+
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <h1>WE ARE EVENT PROFESSIONALS</h1>
+    <p>You Can Find "Festivals, Parties, Conference, Fairs, Exhibitions, Speakers and more"</p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Find experiences">
+      <select>
+        <option>All categories</option>
+        <option>Conference</option>
+        <option>Festival</option>
+        <option>Playground</option>
+      </select>
+      <button><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="hero-buttons">
+      <button class="dark-btn">POPULAR EVENTS</button>
+      <button class="red-btn">LATEST EVENTS</button>
+    </div>
+  </div>
+
+  <!-- Featured Event Section -->
+  <div class="featured-event">
+    <div class="event-info">
+      <div class="icon">
+        <i class="fa fa-calendar"></i>
+      </div>
+      <div>
+        <h4 class="event-title">FEATURED EVENT</h4>
+        <p>Dont Miss The Event. PHP Conference In ISTANBUL</p>
+      </div>
+    </div>
+
+    <div class="countdown">
+      <div><h3>0</h3><p>HOURS</p></div>
+      <div><h3>0</h3><p>MINUTES</p></div>
+      <div><h3>0</h3><p>SECONDS</p></div>
+    </div>
+
+    <button class="ticket-btn">TICKET & DETAIL <i class="fa fa-arrow-circle-right"></i></button>
+  </div>
+  
+  <!-- Event Section -->
+   <div class="event" id="events">
+   <div class="filter-buttons">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Festival</button>
+    <button class="filter-btn">Conference</button>
+    <button class="filter-btn">Playground</button>
+  </div>
+  
+
+  <main class="event-container">
+    <!-- Event Card -->
+    <div class="event-card" data-category="festival">
+      <img src="images/image1.jpg" alt="Event 1" />
+      <div class="event-text">
+        <h3>Boots and Hearts 2016</h3>
+        <p><i class="fa fa-calendar"></i> 08/23/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $52</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="playground">
+      <img src="images/image2.jpg" alt="Event 2" />
+      <div class="event-text">
+        <h3>The World’s Greatest Tribute Bands on AXS TV</h3>
+        <p><i class="fa fa-calendar"></i> 04/06/2017 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $45</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="festival">
+      <img src="images/image3.jpg" alt="Event 3" />
+      <div class="event-text">
+        <h3>BottleRock Napa Valley</h3>
+        <p><i class="fa fa-calendar"></i> 04/01/2017 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $49,99</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="conference">
+      <img src="images/image4.jpg" alt="Event 4" />
+      <div class="event-text">
+        <h3>2016 Clagary Comic & Entertainment Expo</h3>
+        <p><i class="fa fa-calendar"></i> 01/05/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $40</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="festival">
+      <img src="images/image1.jpg" alt="Event 5" />
+      <div class="event-text">
+        <h3>Ladies Free all Night-Eleven45</h3>
+        <p><i class="fa fa-calendar"></i> 11/25/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $42</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="Playground">
+      <img src="images/image5.jpg" alt="Event 6" />
+      <div class="event-text">
+        <h3>Chicago Food Truck Festival</h3>
+        <p><i class="fa fa-calendar"></i> 11/05/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $36</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="conference">
+      <img src="images/image2.jpg" alt="Event 7" />
+      <div class="event-text">
+        <h3>The Governors Ball Music Festival</h3>
+        <p><i class="fa fa-calendar"></i> 05/18/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $30</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+    </div>
+
+    <div class="event-card" data-category="playground">
+      <img src="images/image3.jpg" alt="Event 8" />
+      <div class="event-text">
+        <h3>SoulFuelWV 2016 – Christian Music Festival</h3>
+        <p><i class="fa fa-calendar"></i> 05/04/2016 at 20:00 - 22:00 on Manhattan / New York</p>
+        <p class="price">Tickets from $35.99</p>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="details-btn">TICKETS & DETAILS</button>
+      </div>
+
+  </main>
+</div>
+  
+ 
+
+<div class="features" id="features">
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fa fa-calendar"></i>
+      </div>
+      <h3>7/24 EVENT AVAILABLE</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      <button>DETAILS</button>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fa fa-map-marker"></i>
+      </div>
+      <h3>GREAT LOCATIONS</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      <button>DETAILS</button>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fa fa-user"></i>
+      </div>
+      <h3>MORE THAN 200 SPEAKERS</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      <button>DETAILS</button>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fa fa-music"></i>
+      </div>
+      <h3>LETS PARTY AFTER EVENT</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      <button>DETAILS</button>
+    </div>
+  </div>
+
+  <div class="hotel-section">
+  <div class="hotel-header">
+    <div class="icon-label">
+      <div class="icon">H</div>
+      <h2>HOTELS</h2>
+    </div>
+    <span class="subtitle">/ dont forget book your room</span>
+  </div>
+
+  <div class="hotel-list">
+      <!-- Hotel Card 1 -->
+      <div class="hotel-card">
+        <img src="images/image5.jpg" alt="Hotel 1">
+        <h3>Standard Hotel Name 1</h3>
+        <div class="stars">★★★★★</div>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="book-btn">BOOK</button>
+      </div>
+
+      <!-- Hotel Card 2 -->
+      <div class="hotel-card">
+        <img src="images/image2.jpg" alt="Hotel 2">
+        <h3>Standard Hotel Name 2</h3>
+        <div class="stars">★★★★★</div>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="book-btn">BOOK</button>
+      </div>
+
+      <!-- Hotel Card 3 -->
+      <div class="hotel-card">
+        <img src="images/image6.jpg" alt="Hotel 3">
+        <h3>Standard Hotel Name 3</h3>
+        <div class="stars">★★★★★</div>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="book-btn">BOOK</button>
+      </div>
+
+      <!-- Hotel Card 4 -->
+      <div class="hotel-card">
+        <img src="images/image4.jpg" alt="Hotel 4">
+        <h3>Standard Hotel Name 4</h3>
+        <div class="stars">★★★★★</div>
+        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+        <button class="book-btn">BOOK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-section">
+  <div class="testimonial-header">
+    <img src="images/msg.png" alt="icon" />
+    <h2>TESTIMONIALS <span>/ See What People Say About Us</span></h2>
+  </div>
+
+  <div class="testimonial-slider" id="testimonialSlider">
+    <!-- Testimonial 1 -->
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. 
+          Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt.
+        </p>
+        <div class="author">by jThemes Studio</div>
+      </div>
+      <div class="testimonial-img">
+        <img src="images/avatar1.jpg" alt="Person 1"/>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. 
+          Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt.
+        </p>
+        <div class="author">by jThemes Studio</div>
+      </div>
+      <div class="testimonial-img">
+        <img src="images/avatar2.jpg" alt="Person 2"/>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. 
+          Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt.
+        </p>
+        <div class="author">by jThemes Studio</div>
+      </div>
+      <div class="testimonial-img">
+        <img src="images/avatar3.jpg" alt="Person 3"/>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. 
+          Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt.
+        </p>
+        <div class="author">by jThemes Studio</div>
+      </div>
+      <div class="testimonial-img">
+        <img src="images/avatar4.jpg" alt="Person 4"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="photos">Photos</button>
+    <button class="filter-btn" data-category="videos">Videos</button>
+    <button class="filter-btn" data-category="gallery">Gallery</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <div class="gallery-item" data-category="photos">
+      <img src="images/g1.jpg" alt="gallery1" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="videos">
+      <img src="images/g2.jpg" alt="gallery2" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="gallery">
+      <img src="images/g3.jpg" alt="gallery3" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="photos">
+      <img src="images/g4.jpg" alt="gallery4" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="videos">
+      <img src="images/g5.jpg" alt="gallery5" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="gallery">
+      <img src="images/g6.jpg" alt="gallery6" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="photos">
+      <img src="images/g7.jpg" alt="gallery7" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="videos">
+      <img src="images/g8.jpg" alt="gallery8" />
+      <div class="overlay">
+        <h3>CONFERENCE PARTY</h3>
+        <p>in Istanbul</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="sponsor-section">
+    <div class="sponsor-header">
+      <div class="sponsor-icon"><i class="fa fa-thumbs-up"></i></div>
+      <h2>EVENT SPONSORS <span>/ don't forget it</span></h2>
+      <div class="arrow-controls">
+        <button id="leftBtn">&#9664;</button>
+        <button id="rightBtn">&#9654;</button>
+      </div>
+    </div>
+
+    <div class="sponsor-carousel" id="sponsorCarousel">
+      <div class="sponsor-logo"><img src="images/sp2.png" alt="activeden"></div>
+      <div class="sponsor-logo"><img src="images/sp6.png" alt="themeforest"></div>
+      <div class="sponsor-logo"><img src="images/sp4.png" alt="videohive"></div>
+      <div class="sponsor-logo"><img src="images/sp1.png" alt="graphicriver"></div>
+      <div class="sponsor-logo"><img src="images/sp3.png" alt="audiojungle"></div>
+      <div class="sponsor-logo"><img src="images/sp5.png" alt="photodune"></div>
+    </div>
+
+    <div class="sponsor-cta">
+      <button class="cta-btn"><i class="fa fa-thumbs-up"></i> BECOME A SPONSOR</button>
+    </div>
+  </div>
+
+  <div class="speakers-section">
+    <div class="speakers-header">
+      <div class="icon-box"><i class="fa fa-user"></i></div>
+      <h2>EVENT SPEAKERS <span>/ meet with greaters</span></h2>
+    </div>
+
+    <div class="speakers-container">
+      <div class="speaker-card">
+        <img src="images/avatar3.jpg" alt="Speaker 1">
+        <h3>JENYE LOE</h3>
+        <p class="position">MANAGER</p>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      </div>
+
+      <div class="speaker-card">
+        <img src="images/avatar4.jpg" alt="Speaker 2">
+        <h3>JENYFE LOE</h3>
+        <p class="position">MANAGER</p>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      </div>
+
+      <div class="speaker-card">
+        <img src="images/avatar2.jpg" alt="Speaker 3">
+        <h3>MICHALE LEE</h3>
+        <p class="position developer">DEVELOPER</p>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      </div>
+
+      <div class="speaker-card">
+        <img src="images/avatar1.jpg" alt="Speaker 4">
+        <h3>JACK LIAVD</h3>
+        <p class="position">MANAGER</p>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-banner">
+    <div class="event-content">
+      <div class="event-header">
+        <div class="event-icon"><i class="fa fa-ticket"></i></div>
+        <h2><strong>IM EVENT</strong> <span>/ Landing Page</span></h2>
+      </div>
+      <p class="event-description">
+        One Page Event and Conference Theme is a very clean, modern and outstanding designed HTML template 
+        for multi purpose for any business events, conference, party etc.
+      </p>
+      <a href="#" class="purchase-btn">PURCHASE TEMPLATE</a>
+    </div>
+  </div>
+
+  <div class="blog-section" id="blog">
+  <div class="section-header">
+    <div class="icon-box"><i class="fa fa-file-text"></i></div>
+    <h2><strong>RECENT BLOG POSTS</strong> <span>/ get news!</span></h2>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="images/blog1.jpg" alt="Bridge Image" />
+      <h3>Gallery post format blog post</h3>
+      <div class="meta">Posted on September 21, 2015 <span><i class="fa fa-comment"></i> Comments Off</span></div>
+      <p>
+        Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada ac turpis.
+      </p>
+    </div>
+
+    <div class="blog-card">
+      <img src="images/blog2.jpg" alt="Golden Gate" />
+      <h3>Image with blog post</h3>
+      <div class="meta">Posted on September 20, 2015 <span><i class="fa fa-comment"></i> Comments Off</span></div>
+      <p>
+        Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada ac turpis.
+      </p>
+    </div>
+
+    <div class="blog-card">
+      <img src="images/blog3.jpg" alt="Tablet" />
+      <h3>Youtube with blog post</h3>
+      <div class="meta">Posted on September 16, 2015 <span><i class="fa fa-comment"></i> Comments Off</span></div>
+      <p>
+        Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada ac turpis.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="create-event-section">
+  <div class="create-event-container">
+    <h2>CREATE YOUR OWN NEW EVENT</h2>
+    <p>
+      Bring people together, or turn your passion into a business. Eventbrite gives you everything
+      you need to host your best event yet.
+    </p>
+       <button class="submit-btn">SUBMIT EVENT</button>
+  </div>
+</div>
+
+  
+    <div class="map-container">
+    <div id="map"></div>
+    </div>
+
+<section class="event-section">
+    <div class="event-box">
+      <h2><i class="fa fa-map-marker"></i> EVENT LOCATION</h2>
+      <p>Apple Store SOHO<br />
+      103 Prince St New York,<br />
+      NY 10012, United States<br />
+      +1 212-226-3126</p>
+      <p><a href="mailto:hello@imevent.com">hello@imevent.com</a></p>
+      <button class="direction-btn">GET DIRECTION →</button>
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="social-icons">
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a>
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="Google+"><i class="fa fa-google-plus"></i></a>
+      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+      <a href="#" class="skype"><i class="fa fa-skype"></i></a>
+    </div>
+
+    <p class="footer-text">
+      © 2015 im Event — The Event Manager Theme made with passion by
+      <span class="theme-author">jThemes Studio</span>
+    </p>
+
+    <button onclick="scrollToTop()" class="back-to-top">↑</button>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Custom JS -->
+
+
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+
+
