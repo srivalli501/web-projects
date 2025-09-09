@@ -1,0 +1,85 @@
+<!-- reservation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Include your navbar HTML here -->
+   <!-- Navbar -->
+   <div class="container">
+    <div class="navbar">
+    <div class="logo">
+        <a href="index.html" style="text-decoration:none; color:inherit;">🍴Foodymat</a>
+    </div>
+     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#deals-section">Menu</a></li>
+        <li><a href="index.html#how-to-order">Shop</a></li>
+        <li><a href="index.html#menu-container">Pages</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#footer">Contacts</a></li>
+      </ul>
+
+    </nav>
+    <div class="nav-icons">
+      <a href="cart.html" class="icon"><span>🛒</span><span class="badge">0</span></a>
+      <a href="login.html" class="icon">👤</a>
+      <!--<div class="icon">👤</div>-->
+      <button class="reservation" onclick="location.href='reservation.html'">📅 Reservation</button>
+    </div>
+    </div>
+</div>
+
+  <main class="reservation-section">
+    <h2>Reservation</h2>
+    <p>Reserve your table now and enjoy a delightful dining experience with us.</p>
+    <div class="reservation-form">
+      <label>Date *</label>
+      <input type="date" required />
+
+      <div class="row">
+        <div>
+          <label>Start Time *</label>
+          <input type="time" required />
+        </div>
+        <div>
+          <label>End Time *</label>
+          <input type="time" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Name *</label>
+          <input type="text" placeholder="Enter your name" required />
+        </div>
+        <div>
+          <label>Email *</label>
+          <input type="email" placeholder="Enter your email" required />
+        </div>
+      </div>
+
+      <label>Phone *</label>
+      <input type="tel" placeholder="Enter your phone" required />
+
+      <label>Message</label>
+      <textarea placeholder="Enter your message"></textarea>
+
+      <div class="btn-group">
+        <button type="submit">Request Booking</button>
+        <button type="reset" class="cancel">Request Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
