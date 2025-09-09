@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furniture store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header Section -->
+   <div class="container">
+  <header class="header">
+    <div class="logo">Aunuca</div>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#home">Home </a></li>
+        <li><a href="#shop">Shop </a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#mega">Mega </a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <i class="fa-solid fa-magnifying-glass" onclick="toggleSearch()"></i>
+      <div class="icon-badge">
+        <i class="fa-regular fa-heart" onclick="toggleWishlist()"></i>
+        <span class="badge">0</span>
+      </div>
+      <div class="icon-badge" onclick="toggleCart()">
+        <i class="fa-solid fa-shopping-cart"></i>
+        <span class="badge">0</span>
+      </div>
+      <i class="fa-regular fa-user" onclick="toggleSignIn()"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section" id="home">
+    <div class="hero-content">
+      <p class="tagline">THE YEAR’S TOP 10 DESIGNS</p>
+      <h1>Neutral Styles,<br>New Beginnings</h1>
+      <p class="subtitle">Any item. Any finish. Endless possibilities.</p>
+      <a href="#" class="shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="collection-section">
+    <div class="text-content">
+      <p class="subtitle">Modern & Elegant</p>
+      <h2>Furniture to love now & forever</h2>
+      <p class="description">
+        Discover furniture that’s designed to be cherished, evolving with your life and style, making every moment at home even more special.
+      </p>
+
+      <div class="features">
+        <div class="feature-box">
+          <i class="fa-solid fa-box-open"></i>
+          <div>
+            <h4>Free Shipping</h4>
+            <p>Enjoy free shipping on all orders</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <div>
+            <h4>Affordable Prices</h4>
+            <p>We offer competitive prices</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="collection-btn">View Collection <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="image-content">
+      <div class="image-stack">
+        <img src="images/chair1.png" alt="Chair Image" class="main-img">
+        <img src="images/chair2.jpg" alt="Chair Image" class="sub-img">
+        <!--<div class="image-badge">Introducing <br><strong>New Pieces</strong><br>Spring Collection</div>-->
+    </div>
+</div>
+</div>
+
+<div class="category-section" id="shop">
+    <div class="category-header">
+      <h2>Shopping by category</h2>
+      <div class="arrow-controls">
+       <!----<button onclick="scrollLeft()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="scrollRight()"><i class="fa-solid fa-arrow-right"></i></button>-->
+        <button class="arrow-controls" onclick="scrollCategoryLeft()">←</button>
+        <button class="arrow-controls" onclick="scrollCategoryRight()">→</button>
+      </div>
+    </div>
+    <div class="slider-wrapper">
+      <div class="category-slider" id="categorySlider">
+        <div class="category-card">
+          <img src="images/bathroom.jpg" alt="Bath Room">
+          <h4>Bath Room</h4>
+          <p>4 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/bedroom.jpg" alt="Bedroom">
+          <h4>Bedroom</h4>
+          <p>6 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/decor home.jpg" alt="Decor Home">
+          <h4>Decor Home</h4>
+          <p>5 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/dining room.jpg" alt="Dining Room">
+          <h4>Dining Room</h4>
+          <p>2 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/furniture.jpg" alt="Furniture">
+          <h4>Furniture</h4>
+          <p>3 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/office furniture.jpg" alt="Office Furniture">
+          <h4>Office Furniture</h4>
+          <p>3 products</p>
+        </div>
+        <div class="category-card">
+          <img src="images/outdoor.jpg" alt="Outdoor">
+          <h4>Outdoor</h4>
+          <p>3 products</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="sale-section" id="pages">  
+<h2>Our sale favorites</h2>
+<div class="filter-buttons">
+  <button class="filter-btn active" data-filter="all">All Products</button>
+  <button class="filter-btn" data-filter="new">New Arrivals</button>
+  <button class="filter-btn" data-filter="sale">Sale Items</button>
+  <button class="filter-btn" data-filter="best">Best Sellers</button>
+</div>
+
+<div class="product-container">
+  <!-- Sample Card -->
+  <div class="card" data-category="sale">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product1.jpg" alt="product1">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Enormous Silk Gloves</div>
+    <div class="price">$69.99<del>99.99</del></div>
+
+  </div>
+  <div class="card" data-category="best">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product2.jpg" alt="product2">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Mediocre Linen Hat</div>
+    <div class="price">$562.50</div>
+  </div>
+  <div class="card" data-category="new">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product3.jpg" alt="product3">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Heavy Duty Granite keyboard</div>
+    <div class="price">$178.30</div>
+  </div>
+  <div class="card" data-category="sale">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product4.jpg" alt="product4">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Akemi Rattan Chair</div>
+    <div class="price">$13.41-$810.99</div>
+  </div>
+  <div class="card" data-category="new">
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product5.jpg" alt="product5">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Lightweight Plastic Clock</div>
+    <div class="price">$99.99</div>
+    </div>
+  <div class="card" data-category="best">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product6.jpg" alt="product6">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Small Wooden Table</div>
+    <div class="price">$149.99</div>
+  </div>
+  <div class="card" data-category="sale">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product7.jpg" alt="product7">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Awesome Copper Bottle</div>
+    <div class="price">$299.99</div>
+    </div>
+  <div class="card" data-category="new">
+    <span class="sale-badge">SALE</span>
+    <div class="sale-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <img src="images/product8.jpg" alt="product8">
+    <div class="product-rating">★★★★★</div>
+    <div class="title">Ergonomic Iron Lamp</div>
+    <div class="price">$99.99</div>
+  </div>
+</div>
+</div>
+
+<div class="slider">
+  <div class="slide active" style="background-image: url('images/background3.jpg');">
+    <h1>Bedroom Furniture</h1>
+    <p>FREE SHIPPING ON BEDDING, DECOR</p>
+  </div>
+  <div class="slide" style="background-image: url('images/background2.jpg');">
+    <h1>Dining Room Furniture</h1>
+    <p>FREE DESIGN SERVICES</p>
+  </div>
+  <div class="slide" style="background-image: url('images/background4.jpg');">
+    <h1>Living Room Furniture</h1>
+    <p>SHOP OUR SALE FAVORITES</p>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+  </div>
+</div>
+
+<section class="quote-section">
+  <div class="quote-container">
+    <p class="quote-text">"Good design is the only investment with a guaranteed return."</p>
+    <p class="quote-author">SARA KHODJA</p>
+  </div>
+</section>
+
+<div class="best-selling-section" id="mega">
+  <h2>Best selling items</h2>
+  <div class="best-selling">
+
+    <!-- Left Image -->
+    <div class="left-image">
+      <img src="images/chair2.jpg" alt="Best Selling Item">
+
+    </div>
+
+    <!-- Right Cards -->
+    <div class="right-cards">
+     <!----<button class="arrow-btn arrow-left" onclick="scrollLeft()">&#8592;</button>-->
+      <button class="arrow-btn arrow-left" onclick="scrollBestSellingLeft()">&#8592;</button>
+     <div class="card-container" id="cardContainer">
+
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product8.jpg" alt="Product 1">
+          <div class="product-rating">★★★★★</div>
+          <p>Small1102 Small Wooden Table</p>
+          <div class="price-card">$463.06 <span class="old-price">$480.89</span></div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product6.jpg" alt="Product 2">
+          <div class="product-rating">★★★★★</div>
+          <p>Durable Linen Hat</p>
+          <div class="price-card">$463.06 <span class="old-price">$532.29</span></div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product7.jpg" alt="Product 3">
+          <div class="product-rating">★★★★★</div>
+          <p>Lightweight Plastic Pot</p>
+          <div class="price-card">$171.62 <span class="old-price">$308.76</span></div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product3.jpg" alt="Product 4">
+          <div class="product-rating">★★★★★</div>
+          <p>Heavy Duty Granite Keyboard</p>
+          <div class="price-card">$250.00 <span class="old-price">$310.00</span></div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product4.jpg" alt="Product 5">
+          <div class="product-rating">★★★★★</div>
+          <p>Akemi Rattan Hair</p>
+          <div class="price-card">$120.55 <span class="old-price">$180.00</span></div>
+        </div>
+        <div class="product-card">
+          <div class="badge">SALE</div>
+          <img src="images/product5.jpg" alt="Product 6">
+          <div class="product-rating">★★★★★</div>
+          <p>Ergonomic Iron Lamp</p>
+          <div class="price-card">$99.99 <span class="old-price">$150.00</span></div>
+
+      </div>
+      <button class="arrow-btn arrow-right" onclick="scrollBestSellingRight()">&#8594;</button>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+<section class="furniture-section">
+    <div class="furniture-content">
+        <p class="furniture-subtitle">STURDY AND STYLISH</p>
+        <h1>Minimalist wooden<br>tables blend simplicity</h1>
+        <p class="furniture-description">
+            Discover furniture that's designed to be cherished, evolving with your life and style, making every moment at home even more special.
+        </p>
+        <div class="furniture-features">
+            <div>
+                <p>✔ Portable & lightweight</p>
+                <p>✔ Space saving</p>
+            </div>
+            <div>
+                <p>✔ Durable & stylish design</p>
+                <p>✔ Versatile use</p>
+            </div>
+        </div>
+        <a href="#" class="view-button">View Collection →</a>
+    </div>
+
+    <div class="image-box">
+        <img src="images/flower.webp" alt="Wooden Table">
+    </div>
+</section>
+
+
+<section class="video-section">
+    <img src="images/background4.jpg" alt="Interior Image" class="background-img" />
+    <div class="video-overlay" onclick="openVideo()">
+      <div class="circle-btn">
+        <span class="arrow">↗</span>
+        <p>VIDEO<br>PLAY</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeVideo()">&times;</span>
+      <iframe id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <section class="testimonials">
+    <h2>What our customers say</h2>
+    <p class="sub-heading">25.9M+ Happy Customers &nbsp; | &nbsp; ★ 4.9 Rating</p>
+    <!-- Left: Main customer image -->
+    <div class="testimonial-image">
+      <img src="images/customer-image.jpg" alt="Customer Relaxing"/>
+    </div>
+
+    <!-- Right: Reviews -->
+    <div class="reviews">
+      <div class="review-list">
+        <!-- One Review Card -->
+        <div class="review-card" onclick="showReview(0)">
+          <div class="review-header">
+            <img src="images/r1.jpg" alt="Hannes Wettstein" />
+            <div>
+              <h3>Hannes Wettstein <span>/ CEO & Founder</span></h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-content">
+            “The cabinet was easy enough to put together and seems pretty sturdy. I love that it matches my tv console and is an aesthetically pleasing way for us to store our favorite everyday shoes.”
+          </p>
+        </div>
+
+        <div class="review-card" onclick="showReview(1)">
+          <div class="review-header">
+            <img src="images/r2.jpg" alt="Roberto Martins" />
+            <div>
+              <h3>Roberto Martins <span>/ Architect</span></h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-content">
+            “I bought this bed for the under storage. Lots of space and solid quality metal/wood. Love the LED lighting in the rear and it looks amazing!”
+          </p>
+        </div>
+
+        <div class="review-card" onclick="showReview(2)">
+          <div class="review-header">
+            <img src="images/r3.jpg" alt="Diane Iverson" />
+            <div>
+              <h3>Diane Iverson <span>/ Customs Officer</span></h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-content">
+            “This pair of lamps came with dimmable light bulbs. Easy to put together. I can plug in two cables per lamp. Would like them to be bigger.”
+          </p>
+        </div>
+
+        <div class="review-card" onclick="showReview(3)">
+          <div class="review-header">
+            <img src="images/r4.jpg" alt="Lisa Wallace" />
+            <div>
+              <h3>Lisa Wallace <span>/ HR Manager</span></h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-content">
+            “This oversized chair/bed arrived on time and as expected, it’s sturdy and comfy! Lovely item for teens, and college students.”
+          </p>
+        </div>
+
+        <div class="review-card" onclick="showReview(4)">
+          <div class="review-header">
+            <img src="images/r5.jpg" alt="Shaun Larsen" />
+            <div>
+              <h3>Shaun Larsen <span>/ Investment Analyst</span></h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-content">
+            “These chairs are sturdy but they look amazing in my kitchen. It was love at first sight for real!”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-wrapper">
+  <div class="scroll-content">
+    
+    <!-- Sequence start -->
+    <div class="item">
+      <img src="images/s1.jpg" alt="Image 1">
+      <span>High Quality Materials</span>
+    </div>
+
+    <div class="item">
+      <img src="images/s2.png" alt="Image 2">
+      <span>Modern & Elegant</span>
+    </div>
+    <div class="item">
+      <img src="images/s1.jpg" alt="Image 1">
+      <span>High Quality Materials</span>
+    </div>
+
+    <div class="item">
+      <img src="images/s2.png" alt="Image 2">
+      <span>Modern & Elegant</span>
+    </div>
+  </div>
+</div>
+
+<!-- News Section -->
+<section class="news-section" id="blog">
+  <h2 class="news-title">Latest news & updates</h2>
+  
+  <div class="news-cards-container">
+    
+    <!-- Card 1 -->
+    <div class="news-card" onclick="toggleExpand(this)">
+      <div class="news-header">
+        <div class="news-meta">
+          <span class="news-category">FLOORING</span> | Feb 07, 2025 | By Admin
+        </div>
+        <h3 class="card-title">Seasonal furniture care tips: protecting your pieces year-round</h3>
+      </div>
+      <div class="expand-content">
+        <div class="content-wrapper">
+          <div class="news-content">
+            <div class="news-description">
+              Turning a house into a home is not an easy task. It requires time, attention, and the right home furniture sprinkled with a lot of creative ideas.
+            </div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+          <img src="images/blog1.jpg" alt="Furniture Care">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="news-card" onclick="toggleExpand(this)">
+      <div class="news-header">
+        <div class="news-meta">
+          <span class="news-category">EXTERIORS</span> | Feb 06, 2025 | By Admin
+        </div>
+        <h3 class="card-title">How to create a cozy and stylish home office</h3>
+      </div>
+      <div class="expand-content">
+        <div class="content-wrapper">
+          <div class="news-content">
+            <div class="news-description">
+              Sofa is the heart of your living space, offering a cozy spot for relaxation and entertainment after a long day. Beyond comfort and coziness, choosing a sofa requires careful consideration.
+            </div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+          <img src="images/blog2.jpg" alt="Home Office">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="news-card" onclick="toggleExpand(this)">
+      <div class="news-header">
+        <div class="news-meta">
+          <span class="news-category">DECORATION</span> | Feb 06, 2025 | By Admin
+        </div>
+        <h3 class="card-title">Furniture shopping 101: what to look for in quality pieces</h3>
+      </div>
+      <div class="expand-content">
+        <div class="content-wrapper">
+          <div class="news-content">
+            <div class="news-description">
+              There's so much more to these shelves than meets the eye. What begins as a set of three simple shelves can turn into a dramatic, full-wall bookcase that transforms your space.
+            </div>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+          <img src="images/blog3.jpg" alt="Quality Furniture">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+ <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1>Aunuca</h1>
+            </div>
+
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p>5609 E Sprague Ave, Spokane Valley, WA 99212, USA</p>
+                <a href="tel:+1890123456">+1890 123 456</a>
+                <a href="tel:+1890123678">+1890 123 678</a>
+                <a href="mailto:support@example.com">support@example.com</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>ABOUT COMPANY</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Media Kit</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#">New Products</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Bundle & Save</a></li>
+                    <li><a href="#">Online Gift Card</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section collaborate">
+                <h3>COLLABORATE</h3>
+                <ul>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Partners Program</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">HR Partner Program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>OUR NEWSLETTER</h3>
+                <strong>Join Our Newsletter</strong>
+                <p>Sign up to hear about our latest sales, new arrivals & more.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2025 <strong>Aunca</strong>. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy & Cookie Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+         <div class="back-to-top" onclick="scrollToTop()">
+             <i class="fas fa-arrow-up"></i>
+             </div>
+
+    </footer>
+</div>
+
+ 
+<!-- Cart Panel -->
+<div id="cartPanel" class="cart-panel">
+  <div class="cart-header">
+    <span>Shopping cart</span>
+    <button onclick="toggleCart()" class="close-btn">close ✖</button>
+  </div>
+  <div class="cart-content">
+    <p>No products in the cart.</p>
+  </div>
+</div>
+
+
+
+
+<!-- Sign In Panel -->
+<div id="signInPanel" class="sign-in-panel">
+  <div class="sign-in-header">
+    <h3>Sign in</h3>
+    <button onclick="toggleSignIn()" class="close-btn">✖</button>
+  </div>
+
+  <div class="sign-in-tabs">
+    <span class="active">Sign in</span>
+    <span class="create-account">Create an Account</span>
+  </div>
+
+  <form class="sign-in-form">
+    <label>Username or email <span class="required">*</span></label>
+    <input type="text" placeholder="Username" required />
+
+    <label>Password <span class="required">*</span></label>
+    <input type="password" placeholder="Password" required />
+
+    <button type="submit" class="login-btn">Login</button>
+    <a href="#" class="forgot-password">Lost your password?</a>
+  </form>
+</div>
+
+
+<!-- Search Panel -->
+<div id="searchPanel" class="search-panel">
+  <input type="text" class="search-input" placeholder="Search products..." />
+  <button class="search-close" onclick="toggleSearch()">✖</button>
+</div>
+
+
+<!-- Wishlist Panel -->
+<div id="wishlistPanel" class="wishlist-panel">
+  <div class="wishlist-header">
+    <span>Wishlist</span>
+    <button onclick="toggleWishlist()" class="close-btn">close ✖</button>
+  </div>
+  <div class="wishlist-content">
+    <p>No products in the wishlist.</p>
+  </div>
+</div>
+
+
+</body>
+<script src="index.js"></script>
+</html>
