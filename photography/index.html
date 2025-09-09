@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflector - Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<div class="container"> 
+  <div class="header">
+    <div class="logo">REFLECTOR</div>
+    <nav class="navbar" id="navbar">
+    <ul>    
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#pages">PAGES</a></li>
+      <li><a href="#photoshoots">PHOTOSHOOTS</a></li>
+      <li><a href="#proofgallery">PROOFGALLERY</a></li>
+      <li><a href="#blog">BLOG</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#"><i class="fa fa-search" onclick="toggleSearch()"></i></a></li>
+      </ul>
+    </nav>
+   <!---- <div class="menu-toggle" id="menu-toggle">&#9776;</div>-->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <h4>WELCOME TO REFLECTOR WORLD</h4>
+      <h1>PHOTOGRAPHY</h1>
+      <p>BEING SEARCH OF MEANING</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+  
+ 
+  <section class="about-section" id="pages">
+  <div class="about-container">
+    <div class="about-text">
+      <p class="subheading">GET TO KNOW ME</p>
+      <h2>GET TO KNOW ME BETTER</h2>
+      <hr>
+      <em>"with companions, with those born of the penates, and with the great gods" </em>
+      <p class="description">
+        I’m a trend setter, an adventurer, a photographer! I love experiments and personal projects.
+        Finding new perspectives and breathing in new life into old boring scenes is what inspires and gets me excited!
+      </p>
+      <a href="#" class="contact-btn">CONTACT US</a>
+    </div>
+
+    <div class="about-images">
+      <img src="images/image1.jpg" alt="Girl" class="main-img"/>
+      <img src="images/image2.jpg" alt="Book" class="top-right-img"/>
+      <img src="images/image3.jpg" alt="Coffee" class="bottom-right-img"/>
+    </div>
+  </div>
+</section>
+    
+
+<div class="main-container" id="photoshoots">
+    <div class="main-left-content">
+      <h4>WHAT I LOVE TO SHOOT</h4>
+      <p class="main-description">"With allied companions, and with the Penates, and with the great gods, the mountains being in labor, a ridiculous mouse is born." </p>
+      <ul class="menu">
+        <li onclick="changeImage('commercial')" id="commercial" class="active">/01 COMMERCIAL <span>+</span></li>
+        <li onclick="changeImage('personal')" id="personal">/02 PERSONAL <span>+</span></li>
+        <li onclick="changeImage('editorial')" id="editorial">/03 EDITORIAL <span>+</span></li>
+        <li onclick="changeImage('design')" id="design">/04 DESIGN <span>+</span></li>
+      </ul>
+    </div>
+
+    <div class="image-container">
+      <img id="mainImage" src="images/image4.jpg" alt="Commercial" />
+    </div>
+
+    <div class="right-content">
+      <div class="right-logo">R</div>
+      <p>Floral Design is a full-service wedding and special event planning company which takes care of your floral, design and logistics needs. Our office is located in San Francisco, CA.ring a flawless and magical event for you, is to make your planning.</p>
+    </div>
+  </div>
+
+
+<h1 class="gallery-title">FEATURED GALLERIES</h1>
+  <div class="scroll-controls">
+    <button class="scroll-btn" onclick="scrollGallery('left')"><i class="fas fa-chevron-left"></i> SCROLL</button>
+    <button class="scroll-btn" onclick="scrollGallery('right')">SCROLL <i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="gallery-container" id="proofgallery">
+    <div class="gallery-item">
+      <img src="images/bookaholic.jpg" alt="Bookaholic">
+      <div class="caption">
+        <h2>BOOKAHOLIC</h2>
+        <span>Girly</span>
+      </div>
+    </div>
+     <div class="gallery-item">
+      <img src="images/undersunshine.jpg" alt="Under Sunshine">
+      <div class="caption">
+        <h2>UNDER SUNSHINE</h2>
+        <span>Girly</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/tinygirl.jpg" alt="Tiny Girl">
+      <div class="caption">
+        <h2>TINY GIRL</h2>
+        <span>Girly</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/orci.webp" alt="Orci Varius">
+      <div class="caption">
+        <h2>ORCI VARIUS</h2>
+        <span>Girly</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/night.jpg" alt="Night">
+      <div class="caption">
+        <h2>NIGHT</h2>
+        <span>Girly</span>
+      </div>
+    </div>
+  </div>
+
+
+   <section class="team-section">
+    <div class="text-content">
+      <p class="section-label">Team Members</p>
+      <h2 class="section-title">The Best Team Available</h2>
+      <p class="section-description">
+        I am interested in the details about your wedding, your ceremony & reception venues, your vision, your dress, your colours and anything else you would like to share with me. I am a Gold Coast and Brisbane
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <div class="image-grid">
+        <img src="images/image8.jpg" alt="Team Member" />
+        <img src="images/image9.jpg" alt="Team Member" />
+      </div>
+      <div class="team-list">
+        <div class="member">
+          <span class="name">Jessica Jung</span>
+          <span class="role">Art Director</span>
+        </div>
+        <div class="member">
+          <span class="name">Selena Gomez</span>
+          <span class="role">Photographer</span>
+        </div>
+        <div class="member">
+          <span class="name">Justin Bieber</span>
+          <span class="role">Photographer</span>
+        </div>
+        <div class="member">
+          <span class="name">Gold Coast</span>
+          <span class="role">Editor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="testimonial-section">
+    <div class="overlay">
+      <p class="testimonial-title">TESTIMONIALS</p>
+      <div class="quote">❝</div>
+      <p class="testimonial-text">
+        I am interested in the details about your wedding, your ceremony & reception venues, your vision, your dress, your colours and anything else you would like to share with me.
+      </p>
+      <p class="author">JAMES & MIKE</p>
+
+      <div class="brands">
+        <img src="images/b1.png" alt="Copixel" />
+        <img src="images/b2.png" alt="Love Books" />
+        <img src="images/b3.png" alt="Bullseye" />
+        <img src="images/b4.png" alt="Reverland" />
+        <img src="images/b5.png" alt="Grande" />
+      </div>
+    </div>
+  </section>
+
+<section class="blog-section" id="blog">
+    <h2>BLOG UPDATED</h2>
+    <div class="blog-container">
+
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Blog 1">
+        <p class="blog-date">February 5, 2019</p>
+        <h3 class="blog-title">Summertime Happiness</h3>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Blog 2">
+        <p class="blog-date">February 5, 2019</p>
+        <h3 class="blog-title">Place That I Love</h3>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="images/blog3.jpg" alt="Blog 3">
+        <p class="blog-date">February 5, 2019</p>
+        <h3 class="blog-title">Warm Light</h3>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="blog-card">
+        <img src="images/blog4.jpg" alt="Blog 4">
+        <p class="blog-date">February 5, 2019</p>
+        <h3 class="blog-title">Nine Months of Happiness</h3>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer-container" id="contact">
+    <div class="social-media">
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div class="footer-image-grid">
+        <img src="images/image2.jpg" alt="img1">
+        <img src="images/image1.jpg" alt="img2">
+        <img src="images/image4.jpg" alt="img3">
+        <img src="images/image9.jpg" alt="img4">
+        <img src="images/bookaholic.jpg" alt="img5">
+        <img src="images/tinygirl.jpg" alt="img6">
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number">
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit">Submit Now</button>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        <strong>STUDIO</strong>
+        <a href="#">231 Main Street Chicago, IL</a>
+      </div>
+      <div class="logo-circle">R</div>
+      <div>
+        <strong>Phone</strong><br>
+       <div class="phone-numbers">312.229.9000 - 1 555 55 55</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop">↑</button>
+</div>
+
+
+<!-- Search Panel -->
+<div id="searchPanel" class="search-panel">
+  <input type="text" class="search-input" placeholder="Search products..." />
+  <button class="search-close" onclick="toggleSearch()">✖</button>
+</div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
